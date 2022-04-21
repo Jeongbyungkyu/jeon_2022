@@ -1,0 +1,73 @@
+.welcome-header{
+    margin-top: 90px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.welcom-header__title{
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+.welcom-header__text{
+    width: 50%;
+    margin-bottom: 90px;
+    font-size: 20px;
+    color: #838383;
+}
+
+#login-form{
+    display: flex;
+    flex-direction:column;
+    margin: 0px 30px;
+}
+
+#login-form input{
+    padding: 15px 0px;
+    border: none;
+    font-size: 18px;
+    margin-bottom: 25px;
+    transition: border-color 0.4s ease-in-out;
+}
+
+#login-form input:not([type="submit"]){
+    border-bottom: 1px solid #D5D5D5;
+}
+
+#login-form input::placeholder{
+    color: #D5D5D5;
+    font-family: 'Nanum Pen Script', cursive;
+    transition: color 0.4s ease-in-out;
+}
+
+#login-form input:focus{
+    border-color: #838383;
+}
+
+#login-form input:focus::placeholder{
+    color:#838383;
+}
+
+#login-form input[type=submit]{
+    background-color:#D5D5D5;
+    cursor:pointer;
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 35px;
+    margin: 30px 0;
+    transition: background-color 0.3s ease-in-out, border-radius 0.3s ease-in-out, margin 1s ease-in-out;
+}
+
+#login-form input[type=submit]:hover{
+    background-color:aquamarine;
+    border-radius: 20px;
+}
+
+#login-form a{
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    color: inherit;
+}
