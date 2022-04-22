@@ -1,0 +1,123 @@
+.header__se-jum{
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: tomato;
+    position: absolute;
+    left: 35px;
+    bottom: 35px;
+}
+
+.find__icon{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin: 0px 25px 15px 25px;
+    padding: 0px 25px 20px 25px;
+    text-align: center;
+    color:#404040;
+    border-bottom: 1px solid #F1F1F1;
+}
+
+.find__icon-qr{
+
+}
+
+.find_icon_1{
+    margin-bottom: 20px;
+}
+
+.find_text_1{
+    margin-top: 20px;
+    font-size: 25px;
+    color:#404040;
+}
+
+
+.rec__frd{
+    margin: 0px 25px 0px 25px;
+    font-size: 20px;
+    color:#a8a8a8;
+}
+
+.recom__fr{
+    height: 180px;
+    border-bottom: 1px solid #F1F1F1;
+    margin: 0px 25px 25px 25px;
+    font-size: 20px;
+    color:#a8a8a8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.open11{
+    display:flex;
+    justify-content:space-between;
+}
+
+.open__chat{
+    margin: 10px 25px 0px 25px;
+    padding: 10px 0px 10px 0px;
+    border-bottom: 1px solid #F1F1F1;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+
+.open__chat-title{
+    font-size:25px;
+    color:#414141;
+    padding-bottom: 2px;
+}
+
+.open__chat-sub{
+    font-size:20px;
+    color:#bdbdbd;
+    padding-bottom: 2px;
+}
+
+.open__chat-user{
+    position: relative;
+    display:flex;
+}
+
+.open__chat-userimg{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border:1px solid #bdbdbd;
+}
+.oepn__chat-usermin{
+    font-size:18px;
+    color:#bdbdbd;
+    padding-left: 5px;
+}
+.open__chat-act{
+    font-size:20px;
+    color:#ffc4e8;
+    font-weight:bold;
+}
+
+.open__chat_img{
+    position:relative;
+}
+
+.open__chat-img{
+    width:105px;
+    height:107px;
+    border-radius: 10px;
+}
+
+.open__chat-love{
+    position: absolute;
+    font-size:18px;
+    background-color: rgba(0,0,05, 0.5);
+    text-align: center;
+    padding: 3px 10px 3px 10px;
+    border-radius: 10px;
+    color:white;
+    top:75px;
+    left:35px;
+}

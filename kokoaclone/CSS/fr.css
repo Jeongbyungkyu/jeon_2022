@@ -1,0 +1,19 @@
+#fr__display-link{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:18px;
+    padding:8px;
+    background-color:#FAFAFA;
+    color:#444444;
+}
+
+.fa-circle-info{
+    color:#D5D5D5;
+    margin: 10px;
+}
+
+.fa-angle-right{
+    color:#D5D5D5;
+    margin-left: 15px;
+}

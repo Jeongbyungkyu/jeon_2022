@@ -1,0 +1,61 @@
+.fr__channel{
+    display:flex;
+    justify-content:space-between;
+    margin:0px 20px 0px 20px;
+}
+
+.fr_channel_text{
+    color:#9D9D9D;
+    font-size:25px;
+}
+
+
+.fa-angle-up{
+    color:#9D9D9D;
+}
+
+/*여기서 부터는 채널 밑에 목록 표시*/
+
+.fr__compo{
+    margin: 20px;
+    display:flex;
+    position:relative;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.fr__compo-col:first-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fr__compo-img{
+    width:60px;
+    height: 60px;
+    border-radius: 20px;
+}
+
+.fr__compo-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+}
+
+.fr__compo-title{
+    padding-left: 15px;
+    color:#191919;
+}
+
+.fr__compo-text2{
+    position: absolute;
+    font-size: 35px;
+    right: 15px;
+    top: 15px;
+    color:#9D9D9D;
+}
+.ka{
+    color:#9D9D9D;
+}

@@ -2,7 +2,14 @@
 @import "reset.css";
 @import "status-bar.css";
 @import "form_login.css";
-
+@import "nav-bar_bot.css";
+@import "fr.css";
+@import "header_fr.css";
+@import "user_compo.css";
+@import "fr_d.css";
+@import "chats.css";
+@import "find.css";
 body {
     font-family: 'Nanum Pen Script', cursive;
 }
+

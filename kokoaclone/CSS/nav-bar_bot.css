@@ -1,0 +1,56 @@
+.nav{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color:#F9F9FA;
+    border-top: 1px solid #E4E4E4;
+    padding: 20px 0px;
+    /*박스 사이즈를 안늘리때 쓰는법*/
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.nav__btn{
+    position: relative;
+}
+
+.nav__list{
+    display:flex;
+    justify-content:space-around;
+}
+
+.nav__link{
+
+    color: #2F363E;
+}
+
+.nav__not{
+    background-color:tomato;
+    color:white;
+    display:flex;
+    width: 30px;
+    height: 30px;
+    justify-content:center;
+    align-items:center;
+    border-radius: 15px;
+    /*포지션은 엡솔루트는 부모 relative에서만 작동함*/
+    position: absolute;
+    left: 17px;
+    top: -14px;
+    font-size:20px;
+}
+
+.nav__not__jum{
+    background-color:tomato;
+    display:flex;
+    width: 8px;
+    height: 8px;
+    justify-content:center;
+    align-items:center;
+    border-radius: 4px;
+    /*포지션은 엡솔루트는 부모 relative에서만 작동함*/
+    position: absolute;
+    left: 28px;
+    top: -5px;
+    font-size:20px;
+}

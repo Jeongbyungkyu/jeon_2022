@@ -1,0 +1,29 @@
+.user__compo{
+    border-bottom: 1px solid #F1F1F1;
+    margin: 20px;
+}
+
+.user__compo-col:first-child{
+    display: flex;
+    margin-bottom: 25px;
+
+}
+
+.user__compo-img{
+    width:87px;
+    height: 87px;
+    border-radius: 20px;
+}
+
+.user__compo-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.user__compo-title{
+    padding-left: 20px;
+    color:#191919;
+}
