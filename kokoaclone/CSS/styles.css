@@ -9,6 +9,9 @@
 @import "fr_d.css";
 @import "chats.css";
 @import "find.css";
+@import "more.css";
+@import "setting.css";
+@import "chatroom.css";
 body {
     font-family: 'Nanum Pen Script', cursive;
 }

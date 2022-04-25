@@ -1,0 +1,55 @@
+.setting__head{
+    padding-left: 60px;
+}
+
+.set__go{
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-left: 35px;
+    border-bottom: 1px solid #f6f6f6;
+}
+
+.set__go-toppa{
+    padding-top:20px;
+}
+
+.set__go-icon{
+    color :#4C4C4C;
+}
+
+.set__go-text{
+    font-size: 25px;
+    color :#4C4C4C;
+    padding-left: 20px;
+}
+
+.set__go-sub{
+    font-size: 25px;
+    padding-right: 35px;
+    color :#C8C8C8;
+}
+
+.set__go-lat{
+    justify-content: space-between;
+    margin-left: 0px;
+    border-bottom: 2px solid #f6f6f6;
+}
+
+.set__go-lat1{
+    justify-content: space-between;
+    margin-left: 35px;
+}
+
+.set__go-ver{
+    padding-left: 35px;
+    padding-bottom: 25px;
+}
+
+.kakaman{
+    padding-left: 15px;
+}
+
+.seting__back{
+    text-decoration: none;
+}

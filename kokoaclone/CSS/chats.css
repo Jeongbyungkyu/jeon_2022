@@ -55,3 +55,7 @@
     top: 25px;
     left: 20px;
 }
+
+.chat__text-href{
+    text-decoration: none;
+}

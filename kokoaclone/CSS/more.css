@@ -1,0 +1,79 @@
+.moreimg{
+    width: 75px;
+    height: 75px;
+    border-radius: 32px;    
+}
+
+.moretext{
+    margin-left: 10px;
+}
+
+.moresub{
+    font-size: 25px;
+}
+
+.fa-circle-exclamation{
+    color:tomato;
+    margin-left: 2px;
+}
+
+.fa-clipboard{
+    margin-right: 20px;
+    color:#909090;
+}
+.morebord{
+    border-bottom:1px solid #F1F1F1;;
+    padding-bottom: 20px;
+}
+
+.more__icon{
+/*와 플렉스 웝? 이거 써야함 존니 힘드네*/
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0px 25px 0px 25px;
+    text-align: center;
+    color:#909090;
+    border-bottom: 1px solid #F1F1F1;
+    padding-left: 15px;
+}
+.more__icon_te{
+    padding-bottom: 50px;
+    width: 100px;
+    padding-right: 5px;
+}
+
+.more__icon_img{
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.more__icon_sub{
+    font-size: 20px;
+}
+
+.more__drive{
+        width: 8px;
+        height: 8px;
+        border-radius: 4px;
+        background-color: tomato;
+        position: absolute;
+        left: 70px;
+        bottom: 60px;
+}
+.more__sug_kit{
+    margin: 20px 0px 25px 0px;
+}
+.more__sug{
+    margin:0px 0px 0px 25px;
+    font-size: 20px;
+}
+
+.more__icon_siz{
+    width:54px;
+    height: 54px;
+}
+
+.more__href-st{
+    text-decoration: none;
+}
