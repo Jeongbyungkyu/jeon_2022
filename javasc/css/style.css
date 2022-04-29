@@ -1,0 +1,21 @@
+.hidden{
+    display: none;
+}
+
+#clock{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+#quter{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+#quter span:first-child{
+    margin-bottom: 20px;
+}
