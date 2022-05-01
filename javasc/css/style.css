@@ -19,3 +19,8 @@
 #quter span:first-child{
     margin-bottom: 20px;
 }
+
+#todolist{
+    display:flex;
+    flex-direction:column;
+}
