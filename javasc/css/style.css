@@ -15,7 +15,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
     margin-right: 20px;
     font-size:20px;
 }
@@ -55,13 +55,59 @@ body{
     margin-bottom: 20px;
 }
 
+#todoform{
+    margin-top: 30px;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    justify-content: center;
+    list-style:none;
+    color: whitesmoke;
+    border: 0px solid;
+}
+
+#todoform input{
+    background-color: rgb(255, 255, 255, 0);
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    text-align: center;
+    color: whitesmoke;
+    padding: 10px 25px 10px 25px;
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 20px;
+}
+
+#todoform input::placeholder{
+    color: whitesmoke;
+}
+
 #todolist{
     display:flex;
     flex-direction:column;
     align-items:flex-end;
+    justify-content: center;
     list-style:none;
     color: whitesmoke;
     font-size: 30px;
+}
+
+#todolist li{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    margin-bottom: 5px;
+
+}
+
+#todolist li button{
+    border: 0px solid;
+    background-color:  rgb(255, 255, 255, 0);
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+    color: whitesmoke;
+    margin-left: 25px;
+    cursor: pointer;
 }
 
 #backimggo{
