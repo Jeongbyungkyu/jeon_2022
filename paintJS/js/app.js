@@ -3,15 +3,18 @@ const ctx = paint.getContext(`2d`);
 const range1 = document.getElementById(`jsran`);
 const col = document.querySelector(`div.col`);
 const backpaint = document.querySelector(`div.option`);
-console.log(backpaint);
+const contro = document.querySelector(`#jsran`);
+
 
 let painting = false;
 let col1;
+let contro1;
+
+console.log(contro1)
 
 canvas.width = 800;
 canvas.height = 600;
 ctx.strokeStyle = "black";
-ctx.lineWidth = 2.5;
 
 function stopPainting(){
     painting = false;
@@ -76,11 +79,18 @@ function option(event){
         ctx.fillStyle = col1;
         ctx.fillRect(0, 0, 800, 600);
     } else if(backpaint.children[2].className === event.target.className){
-        html2canvas(paint).then(function(canvas) {
+        html2canvas(paint).then(function(canvas){
             const myImage = canvas.toDataURL();
             downloadURI(myImage, "img저장.png");
         });
     }
+};
+
+function range11(contro1){
+    contro1 = contro1.value = contro.value;
+    console.log(contro1);
+    ctx.lineWidth = contro1;
+    
 };
 
 
@@ -91,5 +101,7 @@ paint.addEventListener(`mouseup`, stopPainting);
 paint.addEventListener(`mouseleave`, stopPainting);
 };
 
+
 col.addEventListener(`click`, colcol);
 backpaint.addEventListener(`click`, option);
+contro.addEventListener(`click`, range11);
