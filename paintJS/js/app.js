@@ -84,7 +84,6 @@ function option(event){
 };
 
 
-
 if(paint){
 paint.addEventListener(`mousemove`, mousemove);
 paint.addEventListener(`mousedown`, mousedown);
