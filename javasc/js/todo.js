@@ -15,6 +15,9 @@ function tododel(event){
     savetodo = savetodo.filter((savetodo) => savetodo.id !== parseInt(tododelko.id));
     savetodlist();
     tododelko.remove();
+
+
+
 };
 
 function todoinput1(newtododata){

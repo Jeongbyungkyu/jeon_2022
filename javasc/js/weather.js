@@ -1,7 +1,8 @@
 const APIkey = `eae03f77e9486e33e2558b0cba92cf38`;
 const weather = document.querySelector(`div#weather`);
+const span1 = document.querySelector(`#span1`);
 
-console.log(weather);
+console.dir(span1);
 
 function onGeo(position){
     const lat = position.coords.latitude;
@@ -9,8 +10,14 @@ function onGeo(position){
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${APIkey}&units=metric`;
         fetch(url).then(response => response.json()).then(data =>{
             const wespan = document.createElement(`span`);
-            wespan.innerText = `국가:${data.sys.country} 지역:${data.name} 온도:${data.main.temp}`;
-            weather.appendChild(wespan);
+            const nara = document.createElement(`span`);
+            const gida = document.createElement(`sapn`);
+            wespan.innerText = `${data.main.temp} 도`;
+            nara.innerText = `${data.sys.country}`;
+            gida.innerText =`${data.name}`;
+            span1.appendChild(nara);
+            span1.appendChild(gida);
+            span1.appendChild(wespan);
         }); 
 };
 
