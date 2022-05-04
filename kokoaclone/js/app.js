@@ -10,10 +10,11 @@ function LoginId(kada){
     const userpw1 = userpw.value;
 
     kada.preventDefault();
-    if(userid1 === `191102` && userpw1 ===`123456`){
+    if(userid1 === `123456` && userpw1 ===`123456`){
         location.href=`fr.html`;
     }else{
-        alert(`ID또는 암호가틀립니다.`);
+        alert(`아이디 암호가 틀리지만 이동합니다`)
+        location.href=`fr.html`;
     }
 }
 

@@ -1,0 +1,125 @@
+.mainbody{
+    background-color:#424242;
+    width:100%;
+    border-radius: 20px;
+    margin-top: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display:flex;
+
+}
+
+.imggu{
+    background-color:aliceblue;
+    border-radius: 25px;
+    width: 500px;
+    height: 400px;
+    margin: 45px 45px 45px 45px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content:center;
+}
+
+
+.muku1{
+    width:350px;
+    position: relative;
+    display: flex;
+    justify-content:space-between;
+}
+
+
+.day__call{
+    display: flex;
+    flex-direction: column;
+    border: 3px solid aliceblue;
+    width: 180px;
+    height: 120px;
+    align-items:center;
+    justify-content:center;
+    border-radius: 30px;
+    background-color: #607D8B;
+    transition: 0.5s ease-in-out;
+}
+
+.day__call:hover{
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.jaturi{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid aliceblue;
+    width: 130px;
+    height: 120px;
+    align-items:center;
+    justify-content:center;
+    border-radius: 30px;
+    background-color: #607D8B;
+    margin-left: 20px;
+    transition: 0.5s ease-in-out;
+
+}
+.jaturi:hover{
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.clock{
+    color:aliceblue;
+    font-size: 35px;
+}
+
+.dayday{
+    color:aliceblue;
+    font-size: 35px;
+}
+
+.wether{
+    position: relative;
+    border: 3px solid aliceblue;
+    width: 350px;
+    height: 120px;
+    align-items:center;
+    justify-content:center;
+    border-radius: 30px;
+    background-color: #607D8B;
+    font-size: 35px;
+    color:aliceblue;
+    display:flex;
+    margin-bottom: 30px;
+    transition: 0.5s ease-in-out;
+}
+
+.wether:hover{
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.wech{
+    padding-left: 35px;
+}
+.jaturi{
+    color:aliceblue;
+}
+
+.quter{
+    background-color:aliceblue;
+    border-radius: 25px;
+    width: 500px;
+    height: 150px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content:center;
+    margin: 45px 45px 45px 45px;
+    font-size: 30px;
+    color:#607D8B;
+}
+
+.mara{
+    margin: 0px 45px 10px 45px;
+}
+
+.nugu{
+    margin: 0px 45px 0px 45px;
+}

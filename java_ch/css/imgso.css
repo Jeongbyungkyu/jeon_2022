@@ -1,0 +1,20 @@
+#backimg1{
+    display:flex;
+    border:4px solid aliceblue;
+    margin: 45px 45px 45px 45px;
+    border-radius: 25px;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-color: aliceblue;
+    background-size: cover;
+}
+
+
+.wow18{
+    display:block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+}
