@@ -17,7 +17,7 @@ function backlodingka(event){
 };
 
 
-function linkmove(event){
+function linkmove(){
     window.open("https://jeongbyungkyu.github.io/jeon_2022/kokoaclone/","캉캉오","width=500px,height=800px");
 }
 
