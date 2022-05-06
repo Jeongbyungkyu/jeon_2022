@@ -5,8 +5,6 @@ const applink = document.querySelector(`.jaturi`)
 console.log(applink);
 
 
-
-
 function backlodingka(event){
     event.preventDefault();
     backloding.style.animation = ANI;
@@ -18,7 +16,7 @@ function backlodingka(event){
 
 
 function linkmove(){
-    window.open("https://jeongbyungkyu.github.io/jeon_2022/kokoaclone/","캉캉오","width=500px,height=800px");
+    window.open("https://jeongbyungkyu.github.io/jeon_2022/kokoaclone/","캉캉오","width=500px,height=900px");
 }
 
 
