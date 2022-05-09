@@ -1,3 +1,6 @@
-const express = require('express'); const app = express()
-
-출처: https://curryyou.tistory.com/348 [카레유]
+.mail__to{
+    display:flex;
+    flex-direction:column;
+    width:800px;
+    padding:10px;
+}

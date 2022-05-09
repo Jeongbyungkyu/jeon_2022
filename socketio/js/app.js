@@ -8,16 +8,22 @@ let submail = {
 }
 
 submail.from = `ouregol@naver.com`
-submail.to =`ouregol@gmail.com`
-submail.subject=`이건 조금더 만들어 보자`
-submail.html=`첫 메일 발송 만들어보기 굿좝`
+
 
 function onClick1(event){
+    const to = document.getElementById(`to`);
+    const subject = document.getElementById(`sub`);
+    const html = document.getElementById(`html`);
+
+    submail.to = to.value;
+    submail.subject =subject.value;
+    submail.html =html.value;
+
+    
     socket.emit(`chatroom`, submail);
 }
 
 socket.on(`chatroom`, (data)=>{
-    console.log(data)
 })
 
 

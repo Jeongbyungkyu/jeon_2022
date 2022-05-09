@@ -11,7 +11,11 @@ const io = socketio(server);
 
 app.use(express.static(path.join(__dirname)))
 
-const PORT = process.env.PORT || 5000;
+const PORT = 5500;
+
+server.listen(PORT, function(){
+  console.log(`환영합니다. 포트번호 : ${PORT}`);
+});
 
 io.on(`connection`, (socket)=>{
   socket.on(`chatroom`,(data)=>{
@@ -49,9 +53,7 @@ io.on(`connection`, (socket)=>{
 
 
 
-server.listen(PORT, function(){
-  console.log(`환영합니다. 포트번호 : ${PORT}`);
-});
+
 
 app.get(`/`, function(post, get){
   get.sendFile(__dirname +`/index.html`)
