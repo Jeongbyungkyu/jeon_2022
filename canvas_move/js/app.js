@@ -17,37 +17,45 @@ let juin = {
 
 };
 
+
 let keys= [];
-let down;
 function keyinput(e){
     keys[e.keyCode] = true;
-    speed = 10;
+    speed = 0.1;
+    setInterval(function keinput1(e){
     if(keys[37]){
         console.log(`left`);
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        juin.x -=speed*3;
+        juin.x -=speed;
         console.log(keys);
 
-    }else if(keys[38]){
+    }
+    if(keys[38]){
         console.log(`up`);
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        juin.y -=speed;
+        juin.y -=speed/2;
         console.log(keys);
 
-    }else if(keys[39]){
+    }
+    if(keys[39]){
         console.log(`right`);
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        juin.x +=speed*3;
+        juin.x +=speed;
         console.log(keys);
 
-    }else if(keys[40]){
+    }
+    if(keys[40]){
         console.log(`down`);
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        juin.y +=speed;
-   }
-   console.log(`rr`+juin.y);
-   console.log(`rr`+juin.x);
-   juin.draw();
+        juin.y +=speed/2;
+    }
+    console.log(`rr`+juin.y);
+    console.log(`rr`+juin.x);
+    juin.draw();
+}, 10);
+
+
+
 }
 
 
@@ -61,7 +69,7 @@ function KeyInputUp(e){
 juin.draw();
 
 window.addEventListener(`keydown`, keyinput, false);
-window.addEventListener(`keydown`, KeyInputUp, false);
+window.addEventListener(`keyup`, KeyInputUp, false);
 
 // function keyInput(event){
 //     switch (event.key){
