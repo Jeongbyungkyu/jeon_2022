@@ -1,13 +1,24 @@
-const sendMail = document.getElementById(`mailsend`)
-const url = require('http://localhost:8080/');
-const querystring = require('querystring');
-
-
-
-
-function sendmail(event){
- console.log(`df`)
+const send = document.getElementById(`send`);
+const socket = io();
+let submail = {
+    from : ``,
+    to : ``,
+    subject : ``,
+    html :``,
 }
 
+submail.from = `ouregol@naver.com`
+submail.to =`ouregol@gmail.com`
+submail.subject=`이건 조금더 만들어 보자`
+submail.html=`첫 메일 발송 만들어보기 굿좝`
 
-sendMail.addEventListener(`click`, sendmail)
+function onClick1(event){
+    socket.emit(`chatroom`, submail);
+}
+
+socket.on(`chatroom`, (data)=>{
+    console.log(data)
+})
+
+
+send.addEventListener(`click`, onClick1);
