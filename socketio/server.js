@@ -42,16 +42,18 @@ io.on(`connection`, (socket)=>{
       io.emit(`chatroom`, `보내기 완료`);
     })
     })
+
+    socket.on(`ggmove`, (data1)=>{
+      io.emit(`ggmove`, data1)
+    })
+
+    socket.on(`ggmove1`, (movedata)=>{
+      console.log(movedata)
+      io.emit(`ggmove1`, movedata)
+      
+    })
+
   })
-
-
-
-
-
-
-
-
-
 
 
 
