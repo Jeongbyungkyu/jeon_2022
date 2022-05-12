@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <title>vajs</title>
+</head>
+<style>
+    #but{
+        border: 0px solid black;
+        background-color: white;
+        font-size: 30px;
+        cursor: pointer;
+    } 
+</style>
+<body>
+    <h1 id="dabong">따봉 몇개 눌렀을까 : 0</h1>
+    <button id="but">👍</button>
+</body>
+<script>
+    const h1 = document.getElementById(`dabong`);
+    const but = document.getElementById(`but`);
+    let cout = 0;
+
+    function butclick(){
+        cout = cout + 1;
+        h1.innerHTML = `따봉 몇개 눌렀을까 : ${cout}`
+    }
+
+    but.addEventListener(`click`, butclick);
+</script>
+</html>

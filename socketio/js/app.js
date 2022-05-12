@@ -56,7 +56,7 @@ let juin1 = {
     x : 100,
     y : 100,
     width :60,
-    height :10,
+    height :30,
     draw(){
         ctx.fillStyle = `red`;
        let ctx1 = ctx.fillRect(this.x, this.y, this.width, this.height);
@@ -72,7 +72,7 @@ socket.emit(`ggmove`, juin1);
 let keys= [];
 function keyinput(e){
     keys[e.keyCode] = true;
-    speed = 5;
+    speed = 10;
     
     if(keys[37]){
         juin.x -=speed;
@@ -100,6 +100,7 @@ socket.on(`ggmove1`, (movedata)=>{
     juin1.x = movedata.x;
     juin1.y = movedata.y;
     juin1.draw();
+
 })
 
 

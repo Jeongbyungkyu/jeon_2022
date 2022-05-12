@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sdfsdf</title>
+</head>
+<style>
+    .gogoname{
+        width:600px;
+    }
+
+    td{
+        border: 1px solid black;
+        width: 100px; 
+    }
+
+
+</style>
+<body>
+    <table class="gogoname">
+        <tr>
+            <td>증권(주식형), 개방형, 추가형<br> 상장지수투자신탁</td>
+            <td id="setting_money">2021.11.16</td>
+            <td id="nav"></td>
+            <td id="now_price"></td>
+            <td id="now_inav"></td>
+            <td id="">2등급(높은 위험)</td>
+        </tr>
+    </table>
+</body>
+<script>
+    function readTextFile(file)
+    {
+        const rawFile = new XMLHttpRequest();
+        rawFile.open("GET", file, false);
+        const allText = rawFile.responseText;
+        rawFile.onreadystatechange = function ()
+        {
+            if(rawFile.readyState === 4)
+            {
+                if(rawFile.status === 200 || rawFile.status == 0)
+                {
+                    const allText = rawFile.responseText;
+                    console.log(allText)
+                }
+            }
+        }
+        rawFile.send(null);
+    }
+
+    readTextFile(`file.txt`);
+
+</script>
+<script>
+
+
+    
+</script>
+</html>
