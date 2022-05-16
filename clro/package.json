@@ -11,6 +11,8 @@
   "dependencies": {
     "axios": "^0.27.2",
     "cheerio": "^1.0.0-rc.10",
+    "fetch": "^1.1.0",
+    "iconv-lite": "^0.6.3",
     "request": "^2.88.2"
   }
 }

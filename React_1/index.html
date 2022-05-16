@@ -31,6 +31,7 @@
     </table>
 </body>
 <script>
+    let kkoo;
     function readTextFile(file)
     {
         const rawFile = new XMLHttpRequest();
@@ -43,7 +44,7 @@
                 if(rawFile.status === 200 || rawFile.status == 0)
                 {
                     const allText = rawFile.responseText;
-                    console.log(allText)
+                    kkoo = allText;
                 }
             }
         }
@@ -51,11 +52,8 @@
     }
 
     readTextFile(`file.txt`);
-
-</script>
-<script>
-
-
-    
+    console.log(kkoo)
+    const now_price = document.getElementById(`now_price`)
+    now_price.innerText = kkoo;
 </script>
 </html>

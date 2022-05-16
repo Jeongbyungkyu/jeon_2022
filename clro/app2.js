@@ -1,29 +1,36 @@
 const request = require("request");
 const cheerio = require("cheerio");
- 
-let scrapingResult = {
-    'date': '',
-    'the_basic_rate': '',
-    'buy': '',
-    'sell': ''
+const axios = require("axios");
+const ic = require("iconv-lite")
+
+let coma = [];
+
+const cocoma = async ()=>{
+
+await axios.get(`http://data.krx.co.kr/contents/MDC/MDI/mdiLoader/index.cmd?menuId=MDC0201030101`)
+
+
+// {responseType: "arraybuffer"}
+
+.then(async (data1)=>{
+    const string = await data1.data;
+    console.log(data1.data)
+    // const string1 = ic.decode(string, `EUC-KR`).toString();
+    const string2 = string.replace(/(\r\n|\n|\r)/gm, "");
+    const $ = cheerio.load(string2);
+    const data2 = $(`.content`)
+    data2.each(async (idx, node) =>{
+       const title = $(node).find(`p`).text();
+    //    console.log(title)
+        await coma.push({
+            date: $(node).find(`p`).text(),
+        })  
+    })
+})
+
+return coma
 }
- 
-function getData() {
-    request("https://finance.naver.com/marketindex/exchangeDailyQuote.nhn", function (err, res, body) {
-        const $ = cheerio.load(body);
-        const bodyList = $(".tbl_exchange tbody tr").map(function (i, element) {
-            scrapingResult['date'] = String($(element).find('td:nth-of-type(1)').text());
-            scrapingResult['the_basic_rate'] =  String($(element).find('td:nth-of-type(2)').text());
-            scrapingResult['buy'] =  String($(element).find('td:nth-of-type(4)').text());
-            scrapingResult['sell'] =  String($(element).find('td:nth-of-type(5)').text());
-            return scrapingResult;
-        });
-    });
-}
 
-getData()
-
-
-
-
-
+cocoma().then((result) => {
+    console.log(result)
+});

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const data ={
+            'bld': 'dbms/MDC/STAT/standard/MDCSTAT04301',
+            'idxIndMidclssCd': '01',
+            'trdDd': `20220516`,
+            'share': '2',
+            'money': '3',
+            'csvxls_isNo': 'false'
+        }
+        const url = `http://data.krx.co.kr/comm/bldAttendant/getJsonData.cmd`
+
+
+            fetch(url, data=data)
+            .then(response => {
+              if (response.status === 200) {
+                return response.json();
+              } else {
+                throw new Error('Something went wrong on api server!');
+              }
+            })
+            .then(response => {
+              console.log(response);
+              // ...
+            }).catch(error => {
+              console.error(error);
+            });
+
+    </script>
+</body>
+</html>
