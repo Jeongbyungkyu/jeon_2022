@@ -4,7 +4,37 @@
     <title>React</title>
 </head>
 <body>
+    <div id="root"></div>
 </body>
 <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+
+    const root = document.getElementById(`root`);
+ //   const H3 = ()=>( <h3 id="wowmoya" onMouseEnter={()=> console.log(`h3가따대기`)}>헬로우 안녕하세요 : 0</h3>);
+  //  const Button = ()=>(<button style={{backgroundColor:"tomato"}} id="button"  onClick={()=> console.log(`클릭완료`)
+  //  }>눌러주세요</button>);
+  //  const span = React.createElement(`h3`, {
+   //     id: `wowmoya`,
+  //      style: {
+  //      color: `red`
+  //      },onMouseEnter:()=> console.log(`스판을 가따 댔구만`)}, `만나서 반갑습니다.`);
+    //const btn =  React.createElement(`button`, {onClick: () => console.log(`버튼을 눌렀구만`)}, `클릭!`);
+function Redman(){
+
+
+    const [count1, setcount] = React.useState(0);
+    const click = ()=>{
+        setcount(count1 +1)
+    };
+    return(
+    <div>
+        <h3>카운트를 세어보자 : {count1}</h3>
+        <button onClick={click}>클릭!</button>
+    </div>
+    );
+}
+    ReactDOM.render(<Redman />, root);
+</script>
 </html>

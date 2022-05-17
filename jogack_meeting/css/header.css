@@ -1,0 +1,20 @@
+.heder{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+ 
+ }
+ 
+ 
+ .heder__user_user{
+     margin-bottom: 10px;
+ }
+ 
+ .heder__user_stas{
+     font-size: 16px;
+ }
+ 
+ .heder__icon__alam{
+     
+ }
