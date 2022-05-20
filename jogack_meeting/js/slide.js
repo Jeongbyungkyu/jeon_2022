@@ -23,11 +23,11 @@ moim_slid.addEventListener(`mousemove`, moim_Hover);
 
 moim_slid.addEventListener(`mouseleave`, moim_Hover_s);
 
-let suja = 385;
+let suja = 409;
 let sujaplus = 0;
 
 function left_move() {
-  if (sujaplus === 0 || sujaplus > -770) {
+  if (sujaplus === 0 || sujaplus > -3681) {
     sujaplus -= suja;
     moim_move.style.transform = `translate(${sujaplus}px)`;
     console.log(sujaplus);
