@@ -1,18 +1,32 @@
-.serch{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 25px;
+.serch {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin-bottom: var(--margin-bottom);
 }
 
-.serch__input{
-    width: 90%;
-    height: 60px;
-    border-radius: 15px;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-size: 24px;
+.serch__input {
+  width: 100%;
+  height: 70px;
+  border-radius: 15px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 20px;
+  padding-left: 75px;
+  border: none;
+  background-color: rgb(244, 245, 245);
 }
 
-.serch__input::placeholder{
-    font-family: 'Noto Sans KR', sans-serif;
-    font-size: 24px;
+.icon__serch {
+  position: absolute;
+  font-size: 35px;
+  font-weight: bold;
+  color: rgb(212, 217, 219);
+  left: 25px;
+  top: 20px;
+}
+
+.serch__input::placeholder {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 18px;
+  color: rgb(212, 217, 219);
 }

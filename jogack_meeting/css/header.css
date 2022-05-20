@@ -1,20 +1,44 @@
-.heder{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 25px;
- 
- }
- 
- 
- .heder__user_user{
-     margin-bottom: 10px;
- }
- 
- .heder__user_stas{
-     font-size: 16px;
- }
- 
- .heder__icon__alam{
-     
- }
+.heder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--margin-bottom);
+}
+
+.heder__user {
+  margin-left: 10px;
+}
+
+.heder__user_plus1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heder__user_img {
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+}
+
+.heder__user_user {
+  margin-bottom: 10px;
+}
+
+.heder__user_stas {
+  font-size: 16px;
+}
+
+.heder__icon__alam {
+  border: 2px solid rgb(245, 245, 245);
+  width: 30px;
+  padding: 10px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.alam__color {
+  color: rgb(128, 144, 151);
+}

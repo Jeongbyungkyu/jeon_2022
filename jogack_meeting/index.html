@@ -1,73 +1,259 @@
 <!DOCTYPE html>
 <html lang="kr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/7ab1d91e8c.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/reset.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/7ab1d91e8c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/reset.css" />
     <title>jogack_meeting</title>
-</head>
-<body>
-<div class="main">
-    <div class="heder">
-        <div class="heder__user">
-            <div class="heder__user_user">사용자</div>
-            <div class="heder__user_stas">오늘 하루도 즐겨봐요</div>
+  </head>
+  <body>
+    <div class="main">
+      <div class="heder">
+        <div class="heder__user_plus1">
+          <img class="heder__user_img" src="https://picsum.photos/80?random=99""
+          />
+          <div class="heder__user">
+            <div class="heder__user_user blod">사용자</div>
+            <div class="heder__user_stas mini_gra">오늘 하루도 즐겨봐요</div>
+          </div>
         </div>
         <div class="heder__icon__alam">
-            <div>알람 아이콘</div>
+          <i class="alam__color heder__icon_a fa-regular fa-bell fa"></i>
         </div>
-    </div>
-    <div class="serch">
-    <input class="serch__input" type="text" placeholder="모임검색"/>
-    </div>
-    <div>
-        <div>조각 모임</div>
-        <div>플러스 아이콘</div>
-    </div>
-    <div>
-        <div>
-            <div>모임 제목</div>
-            <div>점3개 아이콘</div>
-        </div>
-        <div>날짜</div>
-        <div>
-            <div>0%</div>
-            <div>그래프</div>
-        </div>
-        <div>
-            <div>참여자 사진</div>
-            <div>모집중</div>
-        </div>
-    </div>
-    <div>
-        <div>현재 참여중인 조각</div>
-    </div>
-    <div>
-        <div>Today</div>
-        <div>Month</div>
-        <div>Year</div>
-    </div>
-    <div>
-        <div>
-            <div>모임 제목</div>
-            <div>완료</div>
-        </div>
-        <div>모임 장소</div>
-        <div>
-            <div>
-                <div>남은 시간</div>
-                <div> 00:00</div>
+      </div>
+      <div class="serch">
+        <i class="icon__serch fa-solid fa-magnifying-glass"></i>
+        <input
+          class="serch__input"
+          type="text"
+          placeholder="조각모임 찾아보기"
+        />
+      </div>
+      <div class="jogo">
+        <div class="jogo__title blod">Today 추천</div>
+        <i class="jogo__icon_plus fa-solid fa-plus"></i>
+      </div>
+      <!--투데이 추천-->
+      <div class="moim">
+        <i class="left fa-regular fa-circle-left"></i>
+        <i class="right fa-regular fa-circle-right"></i>
+        <div class="moim__move">
+          <div class="moim__pr">
+            <div class="moim__pr_pro">
+              <div class="moim__pr_pro_title">
+                <div class="blod moim_tilte_s">모임 제목</div>
+                <!--div class="blod moim__stats_proman">
+                <p>85%</p>
+              </div-->
+              </div>
+              <div class="blod moim_pr_pro_date">조각 모임날 : 2022.05.18</div>
+              <div class="moim_pr_pro_state">
+                <div class="blod moim_pr_pro_state_bar">
+                  모집인원
+                  <p>(5/8)</p>
+                </div>
+                <div class="moim__state_bar_ko">
+                  <!--div class="moim__stats_proman">20%</div-->
+                  <progress class="bar__1" value="5" max="8"></progress>
+                </div>
+              </div>
+              <div class="moim_pr_pro_last">
+                <div class="sarm__img">
+                  <img
+                    class="sarm__img_0"
+                    src="https://picsum.photos/30?random=1"
+                  />
+                  <img
+                    class="sarm__img_1"
+                    src="https://picsum.photos/30?random=2"
+                  />
+                  <img
+                    class="sarm__img_2"
+                    src="https://picsum.photos/30?random=3"
+                  />
+                  <img
+                    class="sarm__img_3"
+                    src="https://picsum.photos/30?random=4"
+                  />
+                  <img
+                    class="sarm__img_4"
+                    src="https://picsum.photos/30?random=5"
+                  />
+                </div>
+                <div class="blod moim_pr_stats_mojip">조각모음 중..</div>
+              </div>
             </div>
-            <div>
-                <div>참여자 사진</div>
-            </div>
-        </div>
-    </div>
-</div>
+          </div>
 
-<script src="js/main.js"></script>
-</body>
+          <div class="moim__pr">
+            <div class="moim__pr_pro">
+              <div class="moim__pr_pro_title">
+                <div class="blod moim_tilte_s">모임 제목</div>
+                <!--div class="blod moim__stats_proman">
+                <p>85%</p>
+              </div-->
+              </div>
+              <div class="blod moim_pr_pro_date">조각 모임날 : 2022.05.18</div>
+              <div class="moim_pr_pro_state">
+                <div class="blod moim_pr_pro_state_bar">
+                  모집인원
+                  <p>(5/8)</p>
+                </div>
+                <div class="moim__state_bar_ko">
+                  <!--div class="moim__stats_proman">20%</div-->
+                  <progress class="bar__1" value="5" max="8"></progress>
+                </div>
+              </div>
+              <div class="moim_pr_pro_last">
+                <div class="sarm__img">
+                  <img
+                    class="sarm__img_0"
+                    src="https://picsum.photos/30?random=1"
+                  />
+                  <img
+                    class="sarm__img_1"
+                    src="https://picsum.photos/30?random=2"
+                  />
+                  <img
+                    class="sarm__img_2"
+                    src="https://picsum.photos/30?random=3"
+                  />
+                  <img
+                    class="sarm__img_3"
+                    src="https://picsum.photos/30?random=4"
+                  />
+                  <img
+                    class="sarm__img_4"
+                    src="https://picsum.photos/30?random=5"
+                  />
+                </div>
+                <div class="blod moim_pr_stats_mojip">조각모음 중..</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="moim__pr">
+            <div class="moim__pr_pro">
+              <div class="moim__pr_pro_title">
+                <div class="blod moim_tilte_s">모임 제목</div>
+                <!--div class="blod moim__stats_proman">
+                <p>85%</p>
+              </div-->
+              </div>
+              <div class="blod moim_pr_pro_date">조각 모임날 : 2022.05.18</div>
+              <div class="moim_pr_pro_state">
+                <div class="blod moim_pr_pro_state_bar">
+                  모집인원
+                  <p>(5/8)</p>
+                </div>
+                <div class="moim__state_bar_ko">
+                  <!--div class="moim__stats_proman">20%</div-->
+                  <progress class="bar__1" value="5" max="8"></progress>
+                </div>
+              </div>
+              <div class="moim_pr_pro_last">
+                <div class="sarm__img">
+                  <img
+                    class="sarm__img_0"
+                    src="https://picsum.photos/30?random=1"
+                  />
+                  <img
+                    class="sarm__img_1"
+                    src="https://picsum.photos/30?random=2"
+                  />
+                  <img
+                    class="sarm__img_2"
+                    src="https://picsum.photos/30?random=3"
+                  />
+                  <img
+                    class="sarm__img_3"
+                    src="https://picsum.photos/30?random=4"
+                  />
+                  <img
+                    class="sarm__img_4"
+                    src="https://picsum.photos/30?random=5"
+                  />
+                </div>
+                <div class="blod moim_pr_stats_mojip">조각모음 중..</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--여기가 마지막-->
+
+      <div class="jogo">
+        <div class="blod">참여 중인 모임</div>
+      </div>
+      <div class="click__tmy">
+        <div class="blod click__tmy_h select">Today</div>
+        <div class="blod click__tmy_h">Month</div>
+      </div>
+      <div class="moim__y">
+        <div class="moim__stats">
+          <div class="moim__stats_a">
+            <div class="moimy__stats_title margin__bottom">
+              <div class="blod moim_tilte_s">홍대에서 한바퀴도실분!?</div>
+              <div class="moim_pr_stats_mojip_s">조각모음 완료</div>
+            </div>
+            <div class="blod margin__bottom jangso">
+              <p>모임 장소 :</p>
+              <i class="fa-solid fa-map"></i>
+              <div class="moim__y_wich">홍익대학교앞</div>
+            </div>
+            <div class="blod moimy__stats_last">
+              <div class="moimy__stats_k">
+                <div class="blod margin__bottom jangso">
+                  <p>모임 날짜:</p>
+                  <div class="moim__y_wich_s">2022. 05 .19</div>
+                </div>
+                <div class="blod margin__bottom jangso">
+                  <p>모임 시간:</p>
+                  <div class="moim__y_wich_s">18시 00분</div>
+                </div>
+              </div>
+              <div>
+                <div class="sarm__img_s">
+                  <img
+                    class="sarm__img_0_s"
+                    src="https://picsum.photos/30?random=11"
+                  />
+                  <img
+                    class="sarm__img_1_s"
+                    src="https://picsum.photos/30?random=12"
+                  />
+                  <img
+                    class="sarm__img_2_s"
+                    src="https://picsum.photos/30?random=13"
+                  />
+                  <img
+                    class="sarm__img_3_s"
+                    src="https://picsum.photos/30?random=14"
+                  />
+                  <img
+                    class="sarm__img_4_s"
+                    src="https://picsum.photos/30?random=15"
+                  />
+                  <i class="jogo__icon_plus_s fa-solid fa-plus plus_s"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main__botom">
+      <i class="main__botom_icon fa-regular fa-calendar-check"></i>
+      <i class="main__botom_icon fa-regular fa-calendar-plus"></i>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.0/socket.io.js"></script>
+    <script src="js/slide.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
