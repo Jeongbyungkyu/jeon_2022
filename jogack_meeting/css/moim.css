@@ -38,14 +38,18 @@
 
 .moim {
   height: 180px;
-  overflow: hidden;
   margin-bottom: var(--margin-bottom);
 }
 
 .moim__move {
-  display: -webkit-box;
   width: 100%;
-  position: absolute;
+  position: relative;
+  overflow: hidden;
+}
+.moim__move1 {
+  display: flex;
+  width: 4260px;
+  position: relative;
   transition: transform 1s;
 }
 
@@ -72,7 +76,7 @@
   margin-bottom: var(--margin-bottom);
   margin-right: 25px;
   border-radius: 15px;
-  width: 380px;
+  width: 321px;
   justify-content: center;
   align-items: center;
 }

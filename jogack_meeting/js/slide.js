@@ -1,5 +1,5 @@
 const moim_slid = document.querySelector(`.moim`);
-const moim_move = document.querySelector(`.moim__move`);
+const moim_move = document.querySelector(`.moim__move1`);
 const allowLeft = document.querySelector(`.left`);
 const allowRight = document.querySelector(`.right`);
 
@@ -20,14 +20,13 @@ function moim_Hover_s() {
 }
 
 moim_slid.addEventListener(`mousemove`, moim_Hover);
-
 moim_slid.addEventListener(`mouseleave`, moim_Hover_s);
 
-let suja = 409;
+let suja = 350;
 let sujaplus = 0;
-
+let ocha = 0;
 function left_move() {
-  if (sujaplus === 0 || sujaplus > -3681) {
+  if (sujaplus === 0 || sujaplus > -3114) {
     sujaplus -= suja;
     moim_move.style.transform = `translate(${sujaplus}px)`;
     console.log(sujaplus);

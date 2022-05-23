@@ -18,10 +18,6 @@
   justify-content: space-between;
 }
 
-.moimy__stats_k {
-  text-align: center;
-}
-
 .moim_pr_stats_mojip_s {
   display: flex;
   background: rgb(216, 240, 213);
@@ -42,12 +38,13 @@
 
 .jangso {
   display: flex;
-  flex-direction: row;
   position: relative;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.jangso > p {
-  margin-right: 20px;
+.moim__y_soda {
+  display: flex;
 }
 
 .moim__y_wich {
@@ -111,6 +108,23 @@
   top: -5px;
 }
 
-.moim__y_wich_s {
-  margin-left: -2px;
+.moim_date {
+  display: flex;
+}
+
+.moim_si {
+  display: flex;
+}
+
+.maginleft10 {
+  margin-left: 10px;
+}
+
+.moim__y_ji {
+  margin-right: 5px;
+}
+
+.moim__y_valmax {
+  display: flex;
+  justify-content: space-between;
 }

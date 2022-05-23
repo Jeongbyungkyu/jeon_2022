@@ -9,11 +9,11 @@ const io = socketio(server);
 
 app.use(express.static(path.join(__dirname)));
 
-const PORT = 5300;
+const PORT = 5500;
 
 let user_info = [];
 let jogak_info = [];
-
+let userjogak_info = [];
 server.listen(PORT, function () {
   console.log(`환영합니다. 포트번호 : ${PORT}`);
 });
@@ -32,6 +32,7 @@ const db = mysql.createConnection({
 });
 
 db.connect(console.log(`DB접속 성공`));
+
 db.query(`SELECT * FROM user_tb`, function (error, data) {
   const userdata = data;
   user_info.push({
@@ -46,8 +47,22 @@ db.query(`SELECT * FROM moim_tb`, function (error, data) {
   jogak_info = johakdata;
 });
 
+db.query(
+  `SELECT moim_title, moim_int_value, moim_in_max, moim_so, moim_ji, moim_date, moim_time FROM join_tb a, moim_tb b WHERE a.moim_key = b.moim_key`,
+  function (error, data) {
+    const userjogack = data;
+    userjogak_info = userjogack;
+  }
+);
+
 io.on(`connection`, function (socket) {
   console.log(`연결되었따!`);
   socket.emit(`userinfo`, user_info);
   socket.emit(`jogakinfo`, jogak_info);
+  socket.emit(`userjogak_info`, userjogak_info);
+  socket.on(`disconnect`, function () {
+    console.log(`접속종료1`);
+  });
 });
+
+db.end();
