@@ -172,7 +172,6 @@ socket.on(`userjogak_info_m`, (data) => {
       const moimycuga = document.createElement("div");
       let intv = data[i].moim_int_value;
       let intm = data[i].moim_in_max;
-      console.log(data[0]);
       let datetime =
         data[i].moim_time.substr(0, 2) +
         `시 ` +
