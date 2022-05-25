@@ -10,7 +10,6 @@ function clickgo() {
   moim__y.className = `moim__y`;
   moim__m.style.animation = `test1 2s`;
   moim__m.className = `moim__m `;
-  location.reload();
 }
 
 Today.addEventListener(`click`, clickgo);
@@ -22,7 +21,6 @@ function clickmo() {
   moim__y.className = `moim__y anbogi`;
   moim__m.style.animation = `test1 2s`;
   moim__m.className = `moim__m anbogi_m`;
-  location.reload();
 }
 
 Month.addEventListener(`click`, clickmo);
