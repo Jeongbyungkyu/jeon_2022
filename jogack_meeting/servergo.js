@@ -1,3 +1,4 @@
+const db_se = require(`./serverjs/server_ga.js`);
 const express = require(`express`);
 const app = express();
 const path = require(`path`);
@@ -14,6 +15,7 @@ const PORT = 5500;
 let user_info = [];
 let jogak_info = [];
 let userjogak_info = [];
+
 server.listen(PORT, function () {
   console.log(`환영합니다. 포트번호 : ${PORT}`);
 });
@@ -47,22 +49,18 @@ db.query(`SELECT * FROM moim_tb`, function (error, data) {
   jogak_info = johakdata;
 });
 
-db.query(
-  `SELECT moim_title, moim_int_value, moim_in_max, moim_so, moim_ji, moim_date, moim_time FROM join_tb a, moim_tb b WHERE a.moim_key = b.moim_key`,
-  function (error, data) {
-    const userjogack = data;
-    userjogak_info = userjogack;
-  }
-);
-
 io.on(`connection`, function (socket) {
   console.log(`연결되었따!`);
   socket.emit(`userinfo`, user_info);
   socket.emit(`jogakinfo`, jogak_info);
-  socket.emit(`userjogak_info`, userjogak_info);
+  socket.emit(`userjogak_info`, db_se.list_today);
+  socket.emit(`userjogak_info_m`, db_se.list_m[1]);
+
   socket.on(`disconnect`, function () {
     console.log(`접속종료1`);
   });
 });
 
-db.end();
+// let test = {};
+// test = kaka.list_m();
+// for (var i = 0; i < test.length; i++) console.log(test[i]);

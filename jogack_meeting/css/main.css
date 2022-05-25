@@ -66,10 +66,12 @@ body {
   justify-content: center;
   box-shadow: rgba(184, 192, 201, 0.3) 0px 0px 0px 3px;
   border-radius: 20px;
+  cursor: pointer;
 }
 
 .select {
   background-color: rgb(225, 233, 241);
+  transition: 1s;
 }
 
 .main__botom {
@@ -92,4 +94,21 @@ body {
   height: 70px;
   align-items: center;
   justify-content: space-evenly;
+}
+
+.noitem {
+  background: no-repeat url("https://picsum.photos/2000/400?random=1");
+  background-position: center center;
+  width: auto;
+  height: 400px;
+  opacity: 0.1;
+  border-radius: 50px;
+}
+
+.textcuga {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }

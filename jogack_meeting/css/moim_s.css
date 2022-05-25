@@ -42,6 +42,9 @@
   justify-content: space-between;
   align-items: center;
 }
+.moim__y {
+  position: relative;
+}
 
 .moim__y_soda {
   display: flex;
@@ -126,5 +129,30 @@
 
 .moim__y_valmax {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+}
+
+.anbogi {
+  display: none;
+  animation: test1 1s;
+}
+
+@keyframes test1 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.moim__m {
+  position: relative;
+  display: none;
+}
+
+.anbogi_m {
+  display: block;
+  animation: test1 1s;
 }

@@ -29,7 +29,6 @@ function left_move() {
   if (sujaplus === 0 || sujaplus > -3114) {
     sujaplus -= suja;
     moim_move.style.transform = `translate(${sujaplus}px)`;
-    console.log(sujaplus);
   }
 }
 
@@ -39,7 +38,6 @@ function right_move() {
   if (sujaplus < 0) {
     sujaplus += suja;
     moim_move.style.transform = `translate(${sujaplus}px)`;
-    console.log(sujaplus);
   }
 }
 
