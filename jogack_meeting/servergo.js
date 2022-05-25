@@ -13,8 +13,6 @@ app.use(express.static(path.join(__dirname)));
 const PORT = 5500;
 
 let user_info = [];
-let jogak_info = [];
-let userjogak_info = [];
 
 server.listen(PORT, function () {
   console.log(`환영합니다. 포트번호 : ${PORT}`);
@@ -44,23 +42,13 @@ db.query(`SELECT * FROM user_tb`, function (error, data) {
   });
 });
 
-db.query(`SELECT * FROM moim_tb`, function (error, data) {
-  const johakdata = data;
-  jogak_info = johakdata;
-});
-
 io.on(`connection`, function (socket) {
   console.log(`연결되었따!`);
   socket.emit(`userinfo`, user_info);
-  socket.emit(`jogakinfo`, jogak_info);
-  socket.emit(`userjogak_info`, db_se.list_today);
-  socket.emit(`userjogak_info_m`, db_se.list_m[1]);
-
+  socket.emit(`jogakinfo`, db_se.list_today_cu);
+  socket.emit(`userjogak_info`, db_se.list_today());
+  socket.emit(`userjogak_info_m`, db_se.list_m());
   socket.on(`disconnect`, function () {
     console.log(`접속종료1`);
   });
 });
-
-// let test = {};
-// test = kaka.list_m();
-// for (var i = 0; i < test.length; i++) console.log(test[i]);

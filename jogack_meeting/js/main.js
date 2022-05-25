@@ -14,7 +14,7 @@ const moim = document.querySelector(`.moim__move1`);
 const wowcuga = document.querySelector(`.moim__pr`);
 const nums = [];
 socket.on(`jogakinfo`, (data) => {
-  for (let i = 0; i < 9; i++) {
+  for (let i = 0; i < 10; i++) {
     while (true) {
       const num = Math.floor(Math.random() * data.length);
       if (nums.indexOf(num) == -1) {
@@ -32,13 +32,13 @@ socket.on(`jogakinfo`, (data) => {
     const nDate =
       date.substr(0, 4) + ". " + date.substr(5, 2) + ". " + date.substr(8, 2);
 
-    moim_title.innerText = dataran.moim_title;
-    moim_int.innerText = `(${dataran.moim_int_value}/${dataran.moim_in_max})`;
-    moim_date.innerText = `조각 모임날 : ${nDate}`;
-    moiim_bar.value = dataran.moim_int_value;
-    moiim_bar.max = dataran.moim_in_max;
+    // moim_title.innerText = dataran.moim_title;
+    // moim_int.innerText = `(${dataran.moim_int_value}/${dataran.moim_in_max})`;
+    // moim_date.innerText = `조각 모임날 : ${nDate}`;
+    // moiim_bar.value = dataran.moim_int_value;
+    // moiim_bar.max = dataran.moim_in_max;
     cuga.className = `moim__pr`;
-    cuga.innerHTML = `            <div class="moim__pr_pro">
+    cuga.innerHTML = `<div class="moim__pr_pro">
 <div class="moim__pr_pro_title">
   <div class="blod moim_tilte_s">${dataran.moim_title}</div>
   <!--div class="blod moim__stats_proman">
@@ -172,6 +172,7 @@ socket.on(`userjogak_info_m`, (data) => {
       const moimycuga = document.createElement("div");
       let intv = data[i].moim_int_value;
       let intm = data[i].moim_in_max;
+      console.log(data[0]);
       let datetime =
         data[i].moim_time.substr(0, 2) +
         `시 ` +
