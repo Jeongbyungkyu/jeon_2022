@@ -10,7 +10,7 @@ const io = socketio(server);
 
 app.use(express.static(path.join(__dirname)));
 
-const PORT = 5500;
+const PORT = 5300;
 
 let user_info = [];
 
@@ -20,7 +20,6 @@ server.listen(PORT, function () {
 
 app.get(`/`, function (post, get) {
   get.sendFile(`/index.html`);
-  console.log(__dirname);
 });
 const db = mysql.createConnection({
   host: "10.100.220.183",
@@ -50,5 +49,9 @@ io.on(`connection`, function (socket) {
   socket.emit(`userjogak_info_m`, db_se.list_m());
   socket.on(`disconnect`, function () {
     console.log(`접속종료1`);
+  });
+
+  socket.on(`serch_list`, (data) => {
+    socket.emit(`serch_list_s`, db_se.serch_list(data));
   });
 });

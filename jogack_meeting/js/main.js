@@ -1,5 +1,5 @@
-const socket = io();
-// const socket = io(`http://10.100.220.184:5300`);
+// const socket = io();
+const socket = io(`http://10.100.220.184:5300`);
 
 socket.on(`userinfo`, (data) => {
   const username = document.querySelector(`.heder__user_user`);
@@ -155,7 +155,7 @@ socket.on(`userjogak_info`, (data) => {
     }
   }
 });
-//참여중인 조각 모임
+//참여중인 조각 모임 [월]
 socket.on(`userjogak_info_m`, (data) => {
   if (data.length === 0) {
     const moimy = document.querySelector(`.moim__m`);

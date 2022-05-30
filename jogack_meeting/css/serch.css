@@ -1,8 +1,13 @@
+.serch_main {
+  position: relative;
+  margin-bottom: var(--margin-bottom);
+  align-content: center;
+}
+
 .serch {
   display: flex;
   position: relative;
   justify-content: center;
-  margin-bottom: var(--margin-bottom);
 }
 
 .serch__input {
@@ -29,4 +34,22 @@
   font-family: "Noto Sans KR", sans-serif;
   font-size: 18px;
   color: rgb(212, 217, 219);
+}
+
+.serch_list {
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  height: auto;
+  background: rgb(244, 245, 245);
+  z-index: 30;
+  border-radius: 0px 0px 15px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.moim__serch {
+  border: 2px solid white;
+  margin: 15px 25px 15px 25px;
+  border-radius: 15px;
 }

@@ -45,6 +45,13 @@ module.exports = {
     return today_list;
   },
 
+  serch_list: function (data) {
+    let list_serch = db.query(
+      `SELECT * FROM moim_tb WHERE moim_title LIKE '%${data}%' OR moim_so LIKE '%${data}%' OR moim_ji LIKE '%${data}%'`
+    );
+    return list_serch;
+  },
+
   //   list_m: db.query(
   //     `SELECT moim_title, moim_int_value, moim_in_max, moim_so, moim_ji, moim_date, moim_time
   //     FROM join_tb a, moim_tb b
