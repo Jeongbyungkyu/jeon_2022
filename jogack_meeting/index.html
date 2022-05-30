@@ -13,6 +13,43 @@
     <title>jogack_meeting</title>
   </head>
   <body>
+    <form id="moim__plus">
+      <div class="make__title margin__bottom blod">조각모임 만들기</div>
+      <div class="make__value">
+        <div class="make__class margin__bottom blod">
+          <div class="make__title_so">조각 제목</div>
+          <input class="input__style" type="text" />
+        </div>
+        <div class="make__class make__jangso margin__bottom blod">
+          <div class="make__title_so">
+            조각 장소 <i class="fa-solid fa-map maginleft10"></i>
+          </div>
+          <div class="input__style">주소</div>
+        </div>
+        <div class="make__class margin__bottom blod">
+          <div class="make__title_so">조각 지역</div>
+          <select name="moim__y_ji">
+            <option value="" selected>지역 선택</option>
+            <option value="서울">서울</option>
+            <option value="경기">경기</option>
+          </select>
+        </div>
+        <div class="make__class margin__bottom blod">
+          <div class="make__title_so">모집 인원</div>
+          <input class="input__style" type="text" />
+        </div>
+        <div class="make__class margin__bottom blod">
+          <div class="make__title_so">날짜 시간</div>
+          <input class="input__style_s input__dt" type="date" />
+          <input class="input__style_s input__dt" type="time" />
+        </div>
+        <div class="make__class margin__bottom blod">
+          <div class="make__title_so">조각 소개</div>
+          <input class="input__style" type="text" />
+        </div>
+      </div>
+      <input type="submit" value="조각 만들기" />
+    </form>
     <div class="main">
       <div class="heder">
         <div class="heder__user_plus1">
@@ -36,8 +73,7 @@
             placeholder="조각모임 찾아보기"
           />
         </div>
-        <div class="serch_list">
-        </div>
+        <div class="serch_list"></div>
       </div>
       <div class="jogo">
         <div class="jogo__title blod">Today 추천</div>
@@ -48,8 +84,7 @@
         <i class="left fa-regular fa-circle-left"></i>
         <i class="right fa-regular fa-circle-right"></i>
         <div class="moim__move">
-          <div class="moim__move1">
-          </div>
+          <div class="moim__move1"></div>
         </div>
       </div>
       <!--여기가 마지막-->
@@ -58,23 +93,25 @@
         <div class="blod">참여 중인 모임</div>
       </div>
       <div class="click__tmy">
-        <div id="today" class="click__tmy_h blod select ">Today</div>
+        <div id="today" class="click__tmy_h blod select">Today</div>
         <div id="month" class="click__tmy_h blod">Month</div>
+      </div>
+      <div id="moim__y" class="moim__y">
+        <!-- 참여 중인 모임 마지막 -->
+      </div>
+      <div class="moim__m">
+        <!-- 참여 중인 모임 마지막 -->
+      </div>
+      <div class="main__botom">
+        <i class="main__botom_icon fa-regular fa-calendar-check"></i>
+        <i class="main__botom_icon fa-regular fa-calendar-plus"></i>
+      </div>
     </div>
-    <div id="moim__y" class="moim__y">
-      <!-- 참여 중인 모임 마지막 -->
-    </div>
-    <div class="moim__m">
-      <!-- 참여 중인 모임 마지막 -->
-    </div>
-    <div class="main__botom">
-      <i class="main__botom_icon fa-regular fa-calendar-check"></i>
-      <i class="main__botom_icon fa-regular fa-calendar-plus"></i>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.0/socket.io.js"></script>
-    <script src="js/slide.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/main_s.js"></script>
-    <script src="js/serch.js"></script>
   </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.0/socket.io.js"></script>
+  <script src="js/slide.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/main_s.js"></script>
+  <script src="js/serch.js"></script>
+  <script src="js/moim_plus.js"></script>
 </html>
