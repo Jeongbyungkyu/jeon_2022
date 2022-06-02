@@ -87,6 +87,7 @@ body {
   color: rgb(128, 144, 151);
   align-items: center;
   justify-content: space-evenly;
+  border: 2px solid white;
 }
 
 .main__botom_icon {
@@ -95,6 +96,7 @@ body {
   height: 70px;
   align-items: center;
   justify-content: space-evenly;
+  cursor: pointer;
 }
 
 .noitem {

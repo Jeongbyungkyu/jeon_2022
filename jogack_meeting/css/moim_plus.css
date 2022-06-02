@@ -3,19 +3,19 @@
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   width: 80%;
-  height: 650px;
+  height: 700px;
   left: 50%;
   top: 8%;
   transform: translate(-50%);
   z-index: 100;
   background: white;
-  pointer-events: auto;
   opacity: 1;
-  display: flex;
+  display: none;
   flex-direction: column;
   font-family: "Noto Sans KR", sans-serif;
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  z-index: 99;
 }
 
 .moim__plus_back {
@@ -23,13 +23,13 @@
 }
 
 .main {
-  opacity: 0.2;
-  pointer-events: none;
-  z-index: 99;
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 98;
 }
 
 .make__value {
-  margin: 24px 24px 24px 24px;
+  margin: 0px 24px 0px 24px;
   width: 95%;
 }
 
@@ -48,13 +48,14 @@
   font-size: 26px;
   position: relative;
   padding: 1rem 0.5rem;
+  margin-left: 12px;
 }
 .make__title::after {
   position: absolute;
   bottom: 0px;
-  left: 0px;
+  left: 5px;
   content: "";
-  width: 100%;
+  width: 180px;
   height: 6px;
   border-radius: 3px;
   background-image: -webkit-linear-gradient(right, #00b0ff 0%, #00e676 100%);
@@ -65,7 +66,6 @@
   position: relative;
   padding: 0.5rem 0.5rem;
   margin-bottom: 8px;
-  border: 1px solid black;
   width: 100px;
   margin-right: 25px;
   display: flex;
@@ -75,7 +75,7 @@
 .make__title_so::after {
   position: absolute;
   bottom: 0px;
-  left: 0px;
+  left: 2px;
   content: "";
   width: 75px;
   height: 6px;
@@ -89,12 +89,128 @@
 }
 
 .input__style {
-  width: 100%;
+  width: 95%;
   height: 25px;
-  margin: 0px 24px 0px 0px;
+  margin-left: 5px;
+  font-family: "Noto Sans KR", sans-serif;
+  border: none;
+  font-size: 16px;
 }
 
 .input__dt {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;
+}
+
+.input__style_s {
+  width: 50%;
+  border: none;
+  margin-right: 6px;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 2px;
+}
+
+.input__dt_wich {
+  display: flex;
+  position: absolute;
+  left: 100px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.space__bet {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.moim__y_ji_cu {
+  font-size: 16px;
+  padding: 6px 24px 6px 6px;
+  border-radius: 5px;
+  position: absolute;
+  left: 100px;
+  border: none;
+  resize: none;
+  outline: none;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.input__long {
+  height: 150px;
+  resize: none;
+  outline: none;
+}
+
+#title__button {
+  position: relative;
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.moim__make_x {
+  position: absolute;
+  top: 10px;
+  left: 100%;
+  font-size: 30px;
+  margin-right: 300px;
+  transform: translateX(-50px) translateY(5px);
+  color: rgb(128, 144, 151);
+  cursor: pointer;
+  z-index: 1;
+}
+
+.input__make_buuton {
+  border: none;
+  width: 100px;
+  height: 50px;
+  border-radius: 15px;
+  font-family: "Noto Sans KR", sans-serif;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+@keyframes cugamo {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes main {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+@keyframes cugamo_click {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes main_click {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.2;
+    pointer-events: none;
+  }
 }

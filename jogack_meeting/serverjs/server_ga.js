@@ -52,6 +52,19 @@ module.exports = {
     return list_serch;
   },
 
+  moim_input: function (data) {
+    let soget = data.soget.replace(/(?:\r\n|\r|\n)/g, "<br/>");
+    let input_moim = db.query(
+      `INSERT INTO moim_tb (moim_title, moim_in_max, moim_date, moim_time, moim_ji, moim_so, make_user, moim_soget) VALUES('${data.title}', '${data.saram}', '${data.date}', '${data.time}', '${data.moim__y_ji_cu}', '테스트지역', 'ouregol', '${soget}')`
+    );
+    let input_join = db.query(
+      `SELECT make_user, moim_key FROM moim_tb WHERE make_user ='ouregol' AND moim_title = '${data.title}' AND moim_in_max='${data.saram}' AND moim_date='${data.date}'`
+    );
+    db.query(
+      `INSERT INTO join_tb (user_id, moim_key) VALUES('${input_join[0].make_user}','${input_join[0].moim_key}')`
+    );
+    return input_moim;
+  },
   //   list_m: db.query(
   //     `SELECT moim_title, moim_int_value, moim_in_max, moim_so, moim_ji, moim_date, moim_time
   //     FROM join_tb a, moim_tb b

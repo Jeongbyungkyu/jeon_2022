@@ -7,9 +7,11 @@ const server = http.createServer(app);
 const socketio = require(`socket.io`);
 const mysql = require(`mysql`);
 const io = socketio(server);
+const router = express.Router();
+const bodyParser = require("body-parser");
 
 app.use(express.static(path.join(__dirname)));
-
+app.use(bodyParser.urlencoded({ extended: false }));
 const PORT = 5300;
 
 let user_info = [];
@@ -21,6 +23,7 @@ server.listen(PORT, function () {
 app.get(`/`, function (post, get) {
   get.sendFile(`/index.html`);
 });
+
 const db = mysql.createConnection({
   host: "10.100.220.183",
   port: "13306",
@@ -54,4 +57,10 @@ io.on(`connection`, function (socket) {
   socket.on(`serch_list`, (data) => {
     socket.emit(`serch_list_s`, db_se.serch_list(data));
   });
+});
+
+app.post(`/go`, function (req, res) {
+  let input_db = req.body;
+  db_se.moim_input(input_db);
+  res.sendFile(__dirname + `/index.html`);
 });
