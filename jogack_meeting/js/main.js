@@ -5,9 +5,10 @@ socket.on(`userinfo`, (data) => {
   const username = document.querySelector(`.heder__user_user`);
   const usermadi = document.querySelector(`.heder__user_stas`);
   const usersajin = document.querySelector(`.heder__user_img`);
-  username.innerText = data[0].username;
-  usermadi.innerText = data[0].usermadi;
-  usersajin.src = data[0].usersajin;
+  console.log(data);
+  username.innerText = data[0].user_name;
+  usermadi.innerText = data[0].user_madi;
+  usersajin.src = `img/user_img/${data[0].user_id}.jpg`;
 });
 //today 조각 처리 하자
 const moim = document.querySelector(`.moim__move1`);

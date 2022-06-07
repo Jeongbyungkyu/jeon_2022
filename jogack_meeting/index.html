@@ -8,144 +8,35 @@
       src="https://kit.fontawesome.com/7ab1d91e8c.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/login.css" />
     <link rel="stylesheet" href="css/reset.css" />
-    <title>jogack_meeting</title>
+    <title>jogack_meeting_login</title>
   </head>
   <body>
-    <form id="moim__plus" action="/go" method="post">
-      <div id="title__button">
-        <i class="moim__make_x fa-regular fa-circle-xmark"></i>
-        <div class="make__title margin__bottom blod">조각모임 만들기</div>
-      </div>
-      <div class="make__value">
-        <div class="make__class margin__bottom blod">
-          <div class="make__title_so">조각 제목</div>
-          <input
-            name="title"
-            class="input__style"
-            type="text"
-            placeholder="제목을 입력해주세요"
-          />
-        </div>
-        <div class="make__class make__jangso margin__bottom blod">
-          <div class="make__title_so">조각 장소</div>
-          <div class="input__style">장소 입력하기</div>
-        </div>
-        <div class="make__class space__bet margin__bottom blod">
-          <div class="make__title_so">조각 지역</div>
-          <select
-            class="moim__y_ji_cu blod"
-            name="moim__y_ji_cu"
-            id="moim__y_ji_cu"
-          >
-            <option class="blod" value="" selected>지역 선택</option>
-            <option class="blod" value="서울">서울</option>
-            <option class="blod" value="경기">경기</option>
-          </select>
-        </div>
-        <div class="make__class space__bet margin__bottom blod">
-          <div class="make__title_so">모집 인원</div>
-          <input
-            name="saram"
-            class="input__style_s moim__y_ji_cu"
-            type="number"
-            pattern="[0-9]+"
-            placeholder="모집 인원 입력"
-          />
-        </div>
-        <div class="make__class space__bet margin__bottom blod">
-          <div class="make__title_so">날짜 시간</div>
-          <div class="input__dt_wich">
+    <div id="loging_k">
+      <div id="size__joja">
+        <form id="login_form" action="/main" method="post">
+          <div class="title__name">조각 모임에<br />오신걸 환영합니다</div>
+          <div class="login__input_state">
+            <div class="login__input_state_s">로그인정보 입력</div>
+            <input id="input__id" type="text" name="id" placeholder="아이디" />
             <input
-              name="date"
-              class="input__style_s input__dt blod"
-              type="date"
-            />
-            <input
-              name="time"
-              class="input__style_s input__dt blod"
-              type="time"
+              id="input__pw"
+              type="password"
+              placeholder="패스워드"
+              name="password"
             />
           </div>
-        </div>
-        <div class="make__class margin__bottom blod">
-          <div class="make__title_so">조각 소개</div>
-          <textarea
-            name="soget"
-            class="input__style input__long"
-            type="textarea"
-            placeholder="조각을 소개해주세요"
-          ></textarea>
-        </div>
-      </div>
-      <input
-        class="input__make_buuton blod"
-        type="submit"
-        value="조각 만들기"
-      />
-    </form>
-    <div class="main">
-      <div class="heder">
-        <div class="heder__user_plus1">
-          <img class="heder__user_img" src="https://picsum.photos/80?random=99""
-          />
-          <div class="heder__user">
-            <div class="heder__user_user blod">사용자</div>
-            <div class="heder__user_stas mini_gra">오늘 하루도 즐겨봐요</div>
+          <div class="center__gaja">
+            <input id="login__button" type="submit" value="로그인" />
+            <div class="form__bottom">
+              <div id="id__serch">회원 가입</div>
+              <div id="id__serch">암호 찾기</div>
+            </div>
           </div>
-        </div>
-        <div class="heder__icon__alam">
-          <i class="alam__color heder__icon_a fa-regular fa-bell fa"></i>
-        </div>
-      </div>
-      <div class="serch_main">
-        <div class="serch">
-          <i class="icon__serch fa-solid fa-magnifying-glass"></i>
-          <input
-            class="serch__input"
-            type="text"
-            placeholder="조각모임 찾아보기"
-          />
-        </div>
-        <div class="serch_list"></div>
-      </div>
-      <div class="jogo">
-        <div class="jogo__title blod">Today 추천</div>
-        <i class="jogo__icon_plus fa-solid fa-plus"></i>
-      </div>
-      <!--투데이 추천-->
-      <div class="moim">
-        <i class="left fa-regular fa-circle-left"></i>
-        <i class="right fa-regular fa-circle-right"></i>
-        <div class="moim__move">
-          <div class="moim__move1"></div>
-        </div>
-      </div>
-      <!--여기가 마지막-->
-
-      <div class="jogo">
-        <div class="blod">참여 중인 모임</div>
-      </div>
-      <div class="click__tmy">
-        <div id="today" class="click__tmy_h blod select">Today</div>
-        <div id="month" class="click__tmy_h blod">Month</div>
-      </div>
-      <div id="moim__y" class="moim__y">
-        <!-- 참여 중인 모임 마지막 -->
-      </div>
-      <div class="moim__m">
-        <!-- 참여 중인 모임 마지막 -->
-      </div>
-      <div class="main__botom">
-        <i class="main__botom_icon fa-regular fa-calendar-plus"></i>
+        </form>
       </div>
     </div>
   </body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.0/socket.io.js"></script>
-  <script src="js/slide.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/main_s.js"></script>
-  <script src="js/serch.js"></script>
-  <script src="js/moim_plus.js"></script>
+  <script src="js/loging.js"></script>
 </html>

@@ -65,6 +65,19 @@ module.exports = {
     );
     return input_moim;
   },
+
+  login_db: function (data) {
+    let db_login = db.query(`SELECT * FROM user_tb WHERE user_id = '${data}'`);
+    return db_login;
+  },
+
+  login_info: function (data) {
+    let info_log = db.query(
+      `SELECT user_id, user_name, user_email, user_madi FROM user_tb WHERE user_id = '${data}'`
+    );
+    return info_log;
+  },
+
   //   list_m: db.query(
   //     `SELECT moim_title, moim_int_value, moim_in_max, moim_so, moim_ji, moim_date, moim_time
   //     FROM join_tb a, moim_tb b
