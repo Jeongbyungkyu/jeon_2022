@@ -71,7 +71,6 @@ app.post(`/main`, function (req, res) {
   let login_db = req.body;
   let login_pw = login_db.password;
   const idinfo = db_se.login_db(login_db.id);
-  user_id = idinfo[0].user_id;
   if (idinfo.length === 0) {
     res.send(
       `<script>alert('아이디또는 패워드확인하세요'); window.location.replace('/')</script>`
@@ -80,6 +79,7 @@ app.post(`/main`, function (req, res) {
     pwpw.compare(login_pw, idinfo[0].user_pass, function (err, result) {
       try {
         if (result) {
+          user_id = idinfo[0].user_id;
           res.sendFile(__dirname + `/main.html`);
         } else {
           res.send(
